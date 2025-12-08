@@ -35,7 +35,7 @@
         const couponCode = getCouponFromUrl(url);
 
         const button = document.createElement('button');
-        button.textContent = couponCode ? `Use Coupon: ${couponCode}` : 'Go to Course';
+        button.textContent ='Go to Course';
 
         button.style.cssText = `
             padding: 10px 20px;
@@ -48,7 +48,6 @@
             font-weight: bold;
             margin-right: 10px;
             display: inline-block;
-            transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         `;
 
