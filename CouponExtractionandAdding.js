@@ -63,6 +63,15 @@
         }
     }
 
+    function scrollToCouponSection() {
+        const couponSection = document.querySelector('div[class="sidebar-container--purchase-section--XWCM-"]');
+        if (couponSection) {
+            couponSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+    }
 
     function autoFillUdemyCoupon() {
         
@@ -78,6 +87,8 @@
                 setTimeout(fillAndSubmit, 1000);
                 return;
             }
+
+            scrollToCouponSection();
 
             couponInput.value = couponCode;
             couponInput.style.border = '2px solid #4CAF50';
